@@ -1,0 +1,1 @@
+/* Atmosphere shader module for globe visual fidelity and depth cues. */

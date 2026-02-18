@@ -1,0 +1,1 @@
+/* API client abstraction layer for backend communication contracts. */

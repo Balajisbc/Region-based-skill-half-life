@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Region-Based Skill Half-Life Intelligence Dashboard</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/animations.css" />
+		<link rel="stylesheet" href="./css/responsive.css" />
+	</head>
+	<body>
+		<div class="dashboard-shell">
+			<header class="topbar glass-panel">
+				<div class="brand-block">
+					<h1>Region Skill Half-Life Intelligence</h1>
+					<p>Enterprise workforce signal cockpit</p>
+				</div>
+				<div class="topbar-actions">
+					<button class="ghost-btn">Region: Singapore</button>
+					<button class="ghost-btn">Skill: AI Engineering</button>
+				</div>
+			</header>
+
+			<main class="dashboard-grid">
+				<aside class="left-column">
+					<section class="glass-panel panel-lg">
+						<div class="panel-head">
+							<h2>3D Globe Intelligence</h2>
+						</div>
+						<div id="globe-container" class="globe-container neon-ring">
+							<div class="placeholder-label">3D Globe Container</div>
+						</div>
+					</section>
+
+					<section class="glass-panel panel-md">
+						<div class="panel-head">
+							<h2>Flight Animation Target</h2>
+						</div>
+						<div id="flight-target" class="flight-target">
+							<div class="flight-path"></div>
+							<div class="flight-dot"></div>
+						</div>
+					</section>
+				</aside>
+
+				<section class="center-column">
+					<section class="glass-panel welcome-card pulse-border">
+						<h2>Welcome Back, Strategist</h2>
+						<p>
+							Your live region model combines demand volatility, migration patterns, and skill decay trajectories.
+						</p>
+					</section>
+
+					<section class="glass-panel panel-lg">
+						<div class="panel-head">
+							<h2>Skill Trend Chart</h2>
+						</div>
+						<div id="skill-trend-chart" class="chart-frame">
+							<div class="placeholder-label">Trend Visualization Area</div>
+						</div>
+					</section>
+
+					<section class="metrics-grid">
+						<article class="glass-panel metric-card">
+							<h3>Half-Life</h3>
+							<p class="metric-value">6.8 yrs</p>
+						</article>
+						<article class="glass-panel metric-card">
+							<h3>Stability</h3>
+							<p class="metric-value">78.4</p>
+						</article>
+						<article class="glass-panel metric-card">
+							<h3>Volatility</h3>
+							<p class="metric-value">34.2</p>
+						</article>
+						<article class="glass-panel metric-card">
+							<h3>Risk</h3>
+							<p class="metric-value">Medium</p>
+						</article>
+					</section>
+
+					<section class="glass-panel panel-md">
+						<div class="panel-head">
+							<h2>Radar Chart</h2>
+						</div>
+						<div id="radar-chart" class="radar-frame">
+							<div class="placeholder-label">Radar Visualization Area</div>
+						</div>
+					</section>
+
+					<section class="upgrade-grid">
+						<article class="glass-panel upgrade-card">
+							<h3>Safe Pivot</h3>
+							<p>Transition to Data Engineering with low disruption.</p>
+						</article>
+						<article class="glass-panel upgrade-card">
+							<h3>Moderate Pivot</h3>
+							<p>Move into MLOps for stronger regional growth.</p>
+						</article>
+						<article class="glass-panel upgrade-card">
+							<h3>Aggressive Pivot</h3>
+							<p>Advance into AI Platform Engineering for upside.</p>
+						</article>
+					</section>
+
+					<section class="glass-panel panel-lg">
+						<div class="panel-head">
+							<h2>Migration Map</h2>
+						</div>
+						<div id="migration-map" class="map-frame">
+							<div class="placeholder-label">Migration Flow Map Area</div>
+						</div>
+					</section>
+				</section>
+
+				<aside class="right-column">
+					<section class="glass-panel panel-md">
+						<div class="panel-head">
+							<h2>AI Assistant Panel</h2>
+						</div>
+						<p class="assistant-context">Context: Singapore · Downtown Core · AI Engineering</p>
+					</section>
+
+					<section class="glass-panel chat-panel">
+						<div class="panel-head">
+							<h2>Chat Window</h2>
+						</div>
+						<div id="chat-window" class="chat-window">
+							<div class="chat-bubble user">How resilient is this skill over 5 years?</div>
+							<div class="chat-bubble ai">Current trend shows medium risk with stable salary growth in this region.</div>
+						</div>
+						<div class="chat-input-row">
+							<input type="text" placeholder="Ask your assistant..." />
+							<button class="neon-btn">Send</button>
+						</div>
+					</section>
+
+					<section class="glass-panel panel-md">
+						<div class="panel-head">
+							<h2>Voice Controls</h2>
+						</div>
+						<div class="voice-controls">
+							<button class="neon-btn">Start Voice</button>
+							<button class="ghost-btn">Stop</button>
+						</div>
+					</section>
+				</aside>
+			</main>
+		</div>
+
+		<script src="./js/api.js"></script>
+		<script src="./js/dashboard.js"></script>
+		<script src="./js/charts.js"></script>
+		<script src="./js/radar.js"></script>
+		<script src="./js/assistant.js"></script>
+		<script src="./js/voice.js"></script>
+	</body>
+</html>

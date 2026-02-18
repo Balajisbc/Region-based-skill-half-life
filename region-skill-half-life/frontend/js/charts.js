@@ -1,0 +1,1 @@
+/* Data chart rendering module for analytical trend visualizations. */
