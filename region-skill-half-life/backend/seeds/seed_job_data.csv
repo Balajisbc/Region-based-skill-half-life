@@ -1,0 +1,9 @@
+job_id,role,domain,region,demand_score,salary_band
+1,Backend Engineer,Programming,Global,78,$60k-$120k
+2,ML Engineer,AI/ML,Global,85,$90k-$180k
+3,Cloud Engineer,Cloud,Global,81,$80k-$160k
+4,DevOps Engineer,DevOps,Global,79,$75k-$145k
+5,Data Engineer,Data,Global,82,$85k-$165k
+6,Security Engineer,Cybersecurity,Global,84,$95k-$170k
+7,Product Manager,Product,Global,77,$90k-$160k
+8,Edge AI Engineer,Emerging Tech,Global,76,$95k-$190k

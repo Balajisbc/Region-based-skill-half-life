@@ -1,0 +1,41 @@
+group,skill
+Programming,Python
+Programming,JavaScript
+Programming,Java
+Programming,C#
+Programming,Go
+AI / ML,Machine Learning
+AI / ML,Deep Learning
+AI / ML,LLM Engineering
+AI / ML,NLP
+AI / ML,Computer Vision
+Cloud,AWS
+Cloud,Azure
+Cloud,GCP
+Cloud,Cloud Architecture
+Cloud,Cloud Security
+DevOps,CI/CD
+DevOps,Infrastructure as Code
+DevOps,Containerization
+DevOps,Observability
+DevOps,Site Reliability Engineering
+Data,Data Engineering
+Data,Data Analytics
+Data,Data Science
+Data,Data Governance
+Data,BI Engineering
+Cybersecurity,Application Security
+Cybersecurity,Network Security
+Cybersecurity,Cloud Security Operations
+Cybersecurity,Identity and Access Management
+Cybersecurity,Incident Response
+Product,Product Management
+Product,Product Analytics
+Product,UX Strategy
+Product,Agile Delivery
+Product,Growth Strategy
+Emerging Tech,Blockchain
+Emerging Tech,AR/VR
+Emerging Tech,Quantum Computing
+Emerging Tech,Edge AI
+Emerging Tech,Digital Twins

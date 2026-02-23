@@ -1,1 +1,78 @@
-<!-- Registration interface shell for onboarding new users. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account - Skill Half-Life Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="login-page">
+    <div class="bg-gradient-layer" aria-hidden="true"></div>
+    <div class="bg-glow-layer bg-glow-layer--left" aria-hidden="true"></div>
+    <div class="bg-glow-layer bg-glow-layer--right" aria-hidden="true"></div>
+
+    <main class="login-layout fade-in" role="main">
+      <section class="brand-panel" aria-label="Registration overview">
+        <p class="panel-tag">Enterprise Onboarding</p>
+        <h1 class="hero-title">Create your intelligence workspace.</h1>
+        <p class="hero-subtitle">Set up your account to access region-based skill demand forecasting.</p>
+      </section>
+
+      <section class="login-column" aria-label="Create account form">
+        <form id="registerForm" class="login-card" novalidate>
+          <div class="platform-logo" aria-hidden="true">AI</div>
+          <h2 class="login-title">Create Account</h2>
+          <p class="login-subtitle">Get started with your enterprise dashboard.</p>
+
+          <div class="form-group">
+            <label class="field-label" for="registerEmailInput">Email</label>
+            <input id="registerEmailInput" class="field-input" type="email" placeholder="name@company.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label class="field-label" for="registerPasswordInput">Password</label>
+            <input id="registerPasswordInput" class="field-input" type="password" placeholder="••••••••" autocomplete="new-password" />
+          </div>
+
+          <button id="registerBtn" class="signin-btn" type="button" onclick="registerUser()">Create Account</button>
+          <p id="registerError" class="error-message" aria-live="polite"></p>
+
+          <p class="create-account-row">Already have an account? <a href="login.html">Sign In</a></p>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const registerForm = document.getElementById("registerForm");
+      const registerEmailInput = document.getElementById("registerEmailInput");
+      const registerPasswordInput = document.getElementById("registerPasswordInput");
+      const registerError = document.getElementById("registerError");
+
+      function registerUser() {
+        const emailInputValue = registerEmailInput.value.trim();
+        const passwordInputValue = registerPasswordInput.value.trim();
+
+        if (!emailInputValue || !passwordInputValue) {
+          alert("Please enter email and password");
+          registerError.textContent = "Please enter email and password";
+          return;
+        }
+
+        localStorage.setItem("userLoggedIn", "true");
+        localStorage.setItem("userEmail", emailInputValue);
+        window.location.href = "dashboard.html";
+      }
+
+      registerForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        registerUser();
+      });
+    </script>
+  </body>
+</html>

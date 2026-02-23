@@ -1,11 +1,35 @@
-"""Comparative analysis API route declarations across regions and skills."""
+from __future__ import annotations
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
 
-router = APIRouter(prefix="/comparison", tags=["comparison"])
+from data_store import compare_cities
+
+router = APIRouter(tags=["comparison"])
 
 
-@router.get("/status", summary="Comparison module health")
-def comparison_status() -> dict[str, str]:
-	"""Return comparison module readiness status."""
-	return {"module": "comparison", "status": "ready"}
+class CompareRequest(BaseModel):
+    country_a: str
+    city_a: str
+    country_b: str
+    city_b: str
+    skill: str
+    experience: str = "Mid"
+    time_horizon: str = "1y"
+
+
+@router.post("/compare")
+def compare(request: CompareRequest):
+    print("Route hit: /compare")
+    payload = compare_cities(
+        country_a=request.country_a,
+        city_a=request.city_a,
+        country_b=request.country_b,
+        city_b=request.city_b,
+        skill=request.skill,
+        experience=request.experience,
+        time_horizon=request.time_horizon,
+    )
+    if not payload:
+        raise HTTPException(status_code=404, detail="Comparison context not found")
+    return payload

@@ -1,11 +1,18 @@
-"""Scenario simulation API route declarations for workforce transitions."""
+from __future__ import annotations
 
 from fastapi import APIRouter
+
+from data_store import get_seed_job_data
 
 router = APIRouter(prefix="/simulation", tags=["simulation"])
 
 
-@router.get("/status", summary="Simulation module health")
-def simulation_status() -> dict[str, str]:
-	"""Return simulation module readiness status."""
-	return {"module": "simulation", "status": "ready"}
+@router.get("/refresh")
+def simulation_refresh():
+    print("Route hit: /simulation/refresh")
+    rows = get_seed_job_data()
+    return {
+        "status": "ok",
+        "message": "Data refresh simulation complete",
+        "job_seed_records": len(rows),
+    }
